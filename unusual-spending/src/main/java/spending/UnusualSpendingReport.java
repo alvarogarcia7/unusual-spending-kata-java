@@ -1,6 +1,7 @@
 package spending;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.function.Function;
 import java.util.stream.Stream;
 
@@ -15,4 +16,23 @@ public class UnusualSpendingReport {
 		return categoryExpenses.stream().map(mapper);
 	}
 
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		UnusualSpendingReport that = (UnusualSpendingReport) o;
+		return Objects.equals(categoryExpenses, that.categoryExpenses);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(categoryExpenses);
+	}
+
+	@Override
+	public String toString() {
+		return "UnusualSpendingReport{" +
+			"categoryExpenses=" + categoryExpenses +
+			'}';
+	}
 }
