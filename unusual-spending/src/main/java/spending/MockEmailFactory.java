@@ -1,7 +1,17 @@
 package spending;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MockEmailFactory extends EmailFactory {
+	private List<Alert> values = new ArrayList<Alert>();
+
 	public Alert get(int index) {
-		return new Alert();
+		return values.get(index);
+	}
+
+	@Override
+	protected void send(Alert alert) {
+		this.values.add(alert);
 	}
 }
