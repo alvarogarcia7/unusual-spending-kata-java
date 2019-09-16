@@ -1,5 +1,7 @@
 package spending;
 
+import java.util.function.Function;
+
 public class EmailFactory {
 	public void aNew(UnusualSpendingReport unusualSpendingReport) {
 		final StringBuilder stringBuffer = new StringBuilder().append("Hello card user!\n" +
@@ -11,7 +13,8 @@ public class EmailFactory {
 			"Love,\n" +
 			"\n" +
 			"The Credit Card Company");
-		send(new Alert(stringBuffer.toString()));
+		final int total = unusualSpendingReport.map(CategoryExpense::getValue).mapToInt(value -> value).sum();
+		send(new Alert(stringBuffer.toString(), "Unusual spending of $" + total + " detected!"));
 	}
 
 	protected void send(Alert alert) {

@@ -24,6 +24,7 @@ public class TriggersUnusualSpendingEmailTest {
 
 		Alert alert = emailFactory.get(0);
 
+		assertThat(alert.getSubject(), Is.is("Unusual spending of $1076 detected!"));
 		assertThat(alert.getText(), Is.is("Hello card user!\n" +
 			"\n" +
 			"We have detected unusually high spending on your card in these categories:\n" +
