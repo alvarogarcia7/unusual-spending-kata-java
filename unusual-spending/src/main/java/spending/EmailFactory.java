@@ -2,7 +2,7 @@ package spending;
 
 public class EmailFactory {
 	public void aNew(UnusualSpendingReport unusualSpendingReport) {
-		final StringBuffer stringBuffer = new StringBuffer().append("Hello card user!\n" +
+		final StringBuilder stringBuffer = new StringBuilder().append("Hello card user!\n" +
 			"\n" +
 			"We have detected unusually high spending on your card in these categories:\n" +
 			"\n");
