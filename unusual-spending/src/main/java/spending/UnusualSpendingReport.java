@@ -1,6 +1,8 @@
 package spending;
 
 import java.util.List;
+import java.util.function.Function;
+import java.util.stream.Stream;
 
 public class UnusualSpendingReport {
 	private final List<CategoryExpense> categoryExpenses;
@@ -9,7 +11,8 @@ public class UnusualSpendingReport {
 		this.categoryExpenses = categoryExpenses;
 	}
 
-	public CategoryExpense get(int index) {
-		return this.categoryExpenses.get(index);
+	<R> Stream<R> map(Function<? super CategoryExpense, ? extends R> mapper) {
+		return categoryExpenses.stream().map(mapper);
 	}
+
 }

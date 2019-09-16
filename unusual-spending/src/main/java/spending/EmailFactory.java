@@ -6,8 +6,7 @@ public class EmailFactory {
 			"\n" +
 			"We have detected unusually high spending on your card in these categories:\n" +
 			"\n");
-		stringBuffer.append("* You spent $" + unusualSpendingReport.get(0).getValue() + " on " + unusualSpendingReport.get(0).getTitle() + "\n");
-		stringBuffer.append("* You spent $" + unusualSpendingReport.get(1).getValue() + " on " + unusualSpendingReport.get(1).getTitle() + "\n");
+		unusualSpendingReport.map(categoryExpense -> "* You spent $" + categoryExpense.getValue() + " on " + categoryExpense.getTitle() + "\n").forEach(stringBuffer::append);
 		stringBuffer.append("\n" +
 			"Love,\n" +
 			"\n" +
