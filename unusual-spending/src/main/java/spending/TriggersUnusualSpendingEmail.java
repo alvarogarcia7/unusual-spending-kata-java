@@ -13,7 +13,8 @@ public class TriggersUnusualSpendingEmail {
 	public void trigger(long userId) {
 		final MonthExpense previousMonthExpense = monthExpenseRepository.getPreviousMonthExpense(userId);
 		final MonthExpense currentMonthExpense = monthExpenseRepository.getCurrentMonthExpense(userId);
-		this.emailFactory.aNewUnusualSpending(previousMonthExpense, currentMonthExpense);
+		final UnusualSpendingReport unusualSpendingReport = previousMonthExpense.compareUnusualSpendingReport(currentMonthExpense);
+		this.emailFactory.aNew(unusualSpendingReport);
 	}
 
 }
