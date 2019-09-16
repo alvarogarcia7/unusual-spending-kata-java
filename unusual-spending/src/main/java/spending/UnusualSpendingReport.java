@@ -8,4 +8,8 @@ public class UnusualSpendingReport {
 	public UnusualSpendingReport(List<CategoryExpense> categoryExpenses) {
 		this.categoryExpenses = categoryExpenses;
 	}
+
+	public CategoryExpense get(int index) {
+		return this.categoryExpenses.get(index);
+	}
 }
