@@ -11,9 +11,9 @@ public class TriggersUnusualSpendingEmail {
 	}
 
 	public void trigger(long userId) {
-		final MonthExpense previousMonthExpense = monthExpenseRepository.getPreviousMonthExpense(userId);
-		final MonthExpense currentMonthExpense = monthExpenseRepository.getCurrentMonthExpense(userId);
-		final UnusualSpendingReport unusualSpendingReport = previousMonthExpense.compareUnusualSpendingReport(currentMonthExpense);
+		final MonthlyExpenses previousMonthlyExpenses = monthExpenseRepository.getPreviousMonthExpense(userId);
+		final MonthlyExpenses currentMonthlyExpenses = monthExpenseRepository.getCurrentMonthExpense(userId);
+		final UnusualSpendingReport unusualSpendingReport = previousMonthlyExpenses.compareUnusualSpendingReport(currentMonthlyExpenses);
 		this.emailFactory.aNew(unusualSpendingReport);
 	}
 

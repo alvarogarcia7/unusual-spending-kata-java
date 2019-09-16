@@ -2,11 +2,11 @@ package spending;
 
 
 public class MonthExpenseRepository {
-	public MonthExpense getPreviousMonthExpense(long userId) {
+	public MonthlyExpenses getPreviousMonthExpense(long userId) {
 		return null;
 	}
 
-	public MonthExpense getCurrentMonthExpense(long userId) {
+	public MonthlyExpenses getCurrentMonthExpense(long userId) {
 		return null;
 	}
 }

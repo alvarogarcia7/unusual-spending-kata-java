@@ -13,8 +13,8 @@ public class TriggersUnusualSpendingEmailTest {
 	@Test
 	public void trigger() {
 
-		MonthExpense previousMonth = new MonthExpense(new CategoryExpense("groceries", 0), new CategoryExpense("travel", 0));
-		MonthExpense currentMonth = new MonthExpense(new CategoryExpense("groceries", 148), new CategoryExpense("travel", 928));
+		MonthlyExpenses previousMonth = new MonthlyExpenses(new CategoryExpense("groceries", 0), new CategoryExpense("travel", 0));
+		MonthlyExpenses currentMonth = new MonthlyExpenses(new CategoryExpense("groceries", 148), new CategoryExpense("travel", 928));
 		MonthExpenseRepository monthExpenseRepository = mock(MonthExpenseRepository.class);
 		when(monthExpenseRepository.getPreviousMonthExpense(anyLong())).thenReturn(previousMonth);
 		when(monthExpenseRepository.getCurrentMonthExpense(anyLong())).thenReturn(currentMonth);

@@ -2,14 +2,14 @@ package spending;
 
 import java.util.*;
 
-public class MonthExpense {
+public class MonthlyExpenses {
 	private final List<CategoryExpense> categories;
 
-	public MonthExpense(CategoryExpense... categories) {
+	public MonthlyExpenses(CategoryExpense... categories) {
 		this.categories = Arrays.asList(categories);
 	}
 
-	public UnusualSpendingReport compareUnusualSpendingReport(MonthExpense other) {
+	public UnusualSpendingReport compareUnusualSpendingReport(MonthlyExpenses other) {
 		Map<CategoryExpense, Integer> categories = new HashMap<>();
 
 		for (CategoryExpense category : this.categories) {
