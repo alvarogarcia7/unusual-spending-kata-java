@@ -1,4 +1,7 @@
-package spending;
+package spending.alert;
+
+import spending.expense.CategoryExpense;
+import spending.report.UnusualSpendingReport;
 
 public class EmailFactory {
 	public void aNew(UnusualSpendingReport unusualSpendingReport) {

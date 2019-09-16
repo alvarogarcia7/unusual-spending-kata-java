@@ -1,4 +1,4 @@
-package spending;
+package spending.alert;
 
 public class Alert {
 	private final String text;

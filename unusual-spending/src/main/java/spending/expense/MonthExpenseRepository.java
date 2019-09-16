@@ -1,4 +1,4 @@
-package spending;
+package spending.expense;
 
 
 public class MonthExpenseRepository {

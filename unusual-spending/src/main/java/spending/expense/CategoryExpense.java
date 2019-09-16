@@ -1,4 +1,4 @@
-package spending;
+package spending.expense;
 
 import java.util.Objects;
 

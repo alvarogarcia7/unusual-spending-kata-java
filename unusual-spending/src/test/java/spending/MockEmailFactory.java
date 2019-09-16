@@ -1,5 +1,8 @@
 package spending;
 
+import spending.alert.Alert;
+import spending.alert.EmailFactory;
+
 import java.util.ArrayList;
 import java.util.List;
 

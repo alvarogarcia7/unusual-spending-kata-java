@@ -1,5 +1,10 @@
 package spending;
 
+import spending.alert.EmailFactory;
+import spending.expense.MonthExpenseRepository;
+import spending.expense.MonthlyExpenses;
+import spending.report.UnusualSpendingReport;
+
 public class TriggersUnusualSpendingEmail {
 
 	private final MonthExpenseRepository monthExpenseRepository;

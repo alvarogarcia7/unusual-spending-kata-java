@@ -2,6 +2,9 @@ package spending;
 
 import org.hamcrest.core.Is;
 import org.junit.Test;
+import spending.expense.CategoryExpense;
+import spending.expense.MonthlyExpenses;
+import spending.report.UnusualSpendingReport;
 
 import java.util.List;
 

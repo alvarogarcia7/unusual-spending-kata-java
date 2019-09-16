@@ -2,6 +2,10 @@ package spending;
 
 import org.hamcrest.core.Is;
 import org.junit.Test;
+import spending.alert.Alert;
+import spending.expense.CategoryExpense;
+import spending.expense.MonthExpenseRepository;
+import spending.expense.MonthlyExpenses;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.mockito.Matchers.anyLong;

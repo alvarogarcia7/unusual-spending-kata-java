@@ -1,4 +1,6 @@
-package spending;
+package spending.expense;
+
+import spending.report.UnusualSpendingReport;
 
 import java.util.*;
 

@@ -1,4 +1,6 @@
-package spending;
+package spending.report;
+
+import spending.expense.CategoryExpense;
 
 import java.util.List;
 import java.util.Objects;
@@ -12,7 +14,7 @@ public class UnusualSpendingReport {
 		this.categoryExpenses = categoryExpenses;
 	}
 
-	<R> Stream<R> map(Function<? super CategoryExpense, ? extends R> mapper) {
+	public <R> Stream<R> map(Function<? super CategoryExpense, ? extends R> mapper) {
 		return categoryExpenses.stream().map(mapper);
 	}
 
