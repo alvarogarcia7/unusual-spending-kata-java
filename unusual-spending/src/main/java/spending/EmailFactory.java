@@ -1,7 +1,5 @@
 package spending;
 
-import java.util.function.Function;
-
 public class EmailFactory {
 	public void aNew(UnusualSpendingReport unusualSpendingReport) {
 		final StringBuilder stringBuffer = new StringBuilder().append("Hello card user!\n" +
