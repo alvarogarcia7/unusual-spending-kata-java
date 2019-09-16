@@ -7,7 +7,7 @@ public class EmailFactory {
 			"We have detected unusually high spending on your card in these categories:\n" +
 			"\n" +
 			"* You spent $" + unusualSpendingReport.get(0).getValue() + " on " + unusualSpendingReport.get(0).getTitle() + "\n" +
-			"* You spent $928 on travel\n" +
+			"* You spent $" + unusualSpendingReport.get(1).getValue() + " on " + unusualSpendingReport.get(1).getTitle() + "\n" +
 			"\n" +
 			"Love,\n" +
 			"\n" +
