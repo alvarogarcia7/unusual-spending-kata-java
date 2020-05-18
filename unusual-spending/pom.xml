@@ -29,12 +29,6 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>com.testdouble</groupId>
-			<artifactId>unusual-spending-vendor</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>RELEASE</version>
